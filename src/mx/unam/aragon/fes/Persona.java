@@ -5,21 +5,23 @@
  */
 package mx.unam.aragon.fes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author unam
  */
-public class Persona {
+    public class Empleado extends Persona implements Serializable {
     private String nombre;
     private String apPaterno;
     private String apMaterno;
     private int edad;
     private String curp;
 
-    public Persona() {
+    public Empleado() {
     }
 
-    public Persona(String nombre, String apPaterno, String apMaterno, int edad, String curp) {
+    public Empleado(String nombre, String apPaterno, String apMaterno, int edad, String curp) {
         this.nombre = nombre;
         this.apPaterno = apPaterno;
         this.apMaterno = apMaterno;
@@ -67,7 +69,6 @@ public class Persona {
         this.edad = edad;
     }
 
-    @Override
     public String toString() {
         return "Persona{" + "nombre=" + nombre + "\n apPaterno=" + apPaterno + "\n apMaterno=" + apMaterno + "\n edad=" + edad + "\n curp=" + curp + '}';
     }
